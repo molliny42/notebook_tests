@@ -48,6 +48,12 @@ class UserApiClient:
             headers=headers
         )
         
+        print(f"Response status code: {response.status_code}")
+        print(f"Response body: {response.text}")
+        
+        if response.status_code == 400 and "Email address is already in use" in response.text:
+            return {"error": "Email address is already in use"}
+
         response.raise_for_status()
         
         return response.json()
