@@ -1,0 +1,17 @@
+2025-01-27 01:57:45,425 - INFO - Initializing UserApiClient fixture
+2025-01-27 01:57:45,425 - INFO - UserApiClient initialized.
+2025-01-27 01:57:45,425 - INFO - Getting token for user: test2@fake.com
+2025-01-27 01:57:45,426 - INFO - Trying to log in with email: test2@fake.com
+2025-01-27 01:57:45,985 - INFO - Login successful. Token received.
+2025-01-27 01:57:45,986 - INFO - Token received successfully
+2025-01-27 01:57:45,987 - INFO - Adding new user: Tatiana Malinina, Email: tatianamalinina@fake.com
+2025-01-27 01:57:46,557 - INFO - User Tatiana Malinina added successfully.
+2025-01-27 01:57:46,557 - INFO - Logging out user.
+2025-01-27 01:57:47,098 - INFO - User logged out successfully.
+2025-01-27 01:57:47,098 - INFO - Trying to log in with email: tatianamalinina@fake.com
+2025-01-27 01:57:47,650 - INFO - Login successful. Token received.
+2025-01-27 01:57:47,651 - INFO - Getting user profile.
+2025-01-27 01:57:48,292 - INFO - User profile received successfully.
+2025-01-27 01:57:48,812 - INFO - User deleted successfully.
+2025-01-27 01:57:48,813 - INFO - Trying to log in with email: tatianamalinina@fake.com
+2025-01-27 01:57:50,373 - ERROR - Login failed: Invalid email or password.

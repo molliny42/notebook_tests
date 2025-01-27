@@ -1,0 +1,4 @@
+[32mINFO    [0m conftest:conftest.py:12 Initializing UserApiClient fixture
+[32mINFO    [0m api_clients.users_api_client:users_api_client.py:11 UserApiClient initialized.
+[32mINFO    [0m api_clients.users_api_client:users_api_client.py:15 Trying to log in with email: invalid_email@example.com
+[1m[31mERROR   [0m api_clients.users_api_client:users_api_client.py:23 Login failed: Invalid email or password.

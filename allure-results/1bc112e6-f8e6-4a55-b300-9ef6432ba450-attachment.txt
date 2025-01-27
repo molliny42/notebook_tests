@@ -1,0 +1,8 @@
+Token for test2@fake.com: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzgyNjBjMjUzN2Q2NDAwMTM0Y2VkMTQiLCJpYXQiOjE3Mzc5Mzk0NjZ9.5iT1GI7BjaMk52qP8wIS8jdwx-XE927A3hpuYql7E6U
+Logged out from test2@fake.com
+headers
+{'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Nzk2ZGEwYTU0MjAxNjAwMTM5YTU5YTgiLCJpYXQiOjE3Mzc5Mzk0Njd9.xBqtPgCkw_1FXpvj13A1-jKq456ovwIm_OS1Afvl0dU'}
+<Response [200]>
+headers for deleting
+{'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Nzk2ZGEwYTU0MjAxNjAwMTM5YTU5YTgiLCJpYXQiOjE3Mzc5Mzk0Njd9.xBqtPgCkw_1FXpvj13A1-jKq456ovwIm_OS1Afvl0dU'}
+Deleted user response: 200

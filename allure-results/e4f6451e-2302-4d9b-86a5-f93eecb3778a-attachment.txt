@@ -1,0 +1,17 @@
+[32mINFO    [0m conftest:conftest.py:12 Initializing UserApiClient fixture
+[32mINFO    [0m api_clients.users_api_client:users_api_client.py:11 UserApiClient initialized.
+[32mINFO    [0m conftest:conftest.py:18 Getting token for user: test2@fake.com
+[32mINFO    [0m api_clients.users_api_client:users_api_client.py:15 Trying to log in with email: test2@fake.com
+[32mINFO    [0m api_clients.users_api_client:users_api_client.py:53 Login successful. Token received.
+[32mINFO    [0m conftest:conftest.py:22 Token received successfully
+[32mINFO    [0m api_clients.users_api_client:users_api_client.py:58 Adding new user: Tatiana Malinina, Email: tatianamalinina@fake.com
+[32mINFO    [0m api_clients.users_api_client:users_api_client.py:71 User Tatiana Malinina added successfully.
+[32mINFO    [0m api_clients.users_api_client:users_api_client.py:117 Logging out user.
+[32mINFO    [0m api_clients.users_api_client:users_api_client.py:128 User logged out successfully.
+[32mINFO    [0m api_clients.users_api_client:users_api_client.py:15 Trying to log in with email: tatianamalinina@fake.com
+[32mINFO    [0m api_clients.users_api_client:users_api_client.py:53 Login successful. Token received.
+[32mINFO    [0m api_clients.users_api_client:users_api_client.py:77 Getting user profile.
+[32mINFO    [0m api_clients.users_api_client:users_api_client.py:89 User profile received successfully.
+[32mINFO    [0m api_clients.users_api_client:users_api_client.py:108 User deleted successfully.
+[32mINFO    [0m api_clients.users_api_client:users_api_client.py:15 Trying to log in with email: tatianamalinina@fake.com
+[1m[31mERROR   [0m api_clients.users_api_client:users_api_client.py:23 Login failed: Invalid email or password.
