@@ -1,5 +1,6 @@
 import requests
 from logger_config import setup_logger
+from models.contact_data import ContactData
 
 logger = setup_logger(__name__, "contacts_api_client.log")
 
@@ -10,35 +11,27 @@ class ContactsApiClient:
         self.token = token
         logger.info("ContactsApiClient initialized.")
 
-    def add_contact(self, first_name, last_name, birthdate, email, phone, street1, street2, city, state_province, postal_code, country):
+    def add_contact(self, contact_data: dict):
         """Method to add a new contact."""
-        logger.info(f"Adding contact: {first_name} {last_name}, Email: {email}")
+        logger.info(f"Adding contact: {contact_data}")
         headers = {"Authorization": f"Bearer {self.token}"} if self.token else {}
         response = requests.post(
             f"{self.BASE_URL}/contacts",
             json={
-                "firstName": first_name,
-                "lastName": last_name,
-                "birthdate": birthdate,
-                "email": email,
-                "phone": phone,
-                "street1": street1,
-                "street2": street2,
-                "city": city,
-                "stateProvince": state_province,
-                "postalCode": postal_code,
-                "country": country
+                "firstName": contact_data.get("first_name"),
+                "lastName": contact_data.get("last_name"),
+                "birthdate": contact_data.get("birthdate"),
+                "email": contact_data.get("email"),
+                "phone": contact_data.get("phone"),
+                "street1": contact_data.get("street1"),
+                "street2": contact_data.get("street2"),
+                "city": contact_data.get("city"),
+                "stateProvince": contact_data.get("state_province"),
+                "postalCode": contact_data.get("postal_code"),
+                "country": contact_data.get("country")
             },
             headers=headers
         )
-        
-        #  try:
-        #     response.raise_for_status()
-        # except requests.exceptions.HTTPError as e:
-        #     logger.error(f"HTTP error occurred while adding contact: {e}")
-        #     raise
-        
-        # logger.info(f"Contact {first_name} {last_name} added successfully.")
         return response
 
     def get_contacts(self):
@@ -47,13 +40,6 @@ class ContactsApiClient:
         headers = {"Authorization": f"Bearer {self.token}"} if self.token else {}
         response = requests.get(f"{self.BASE_URL}/contacts", headers=headers)
         
-        # try:
-        #     response.raise_for_status()
-        # except requests.exceptions.HTTPError as e:
-        #     logger.error(f"HTTP error occurred while getting contacts: {e}")
-        #     raise
-        
-        # logger.info(f"Retrieved {len(response.json())} contacts.")
         return response
 
     def get_contact_by_id(self, contact_id):
@@ -62,13 +48,6 @@ class ContactsApiClient:
         headers = {"Authorization": f"Bearer {self.token}"} if self.token else {}
         response = requests.get(f"{self.BASE_URL}/contacts/{contact_id}", headers=headers)
         
-        # try:
-        #     response.raise_for_status()
-        # except requests.exceptions.HTTPError as e:
-        #     logger.error(f"HTTP error occurred while getting contact {contact_id}: {e}")
-        #     raise
-        
-        # logger.info(f"Contact {contact_id} retrieved successfully.")
         return response
 
     def update_contact(self, contact_id, first_name=None, last_name=None, birthdate=None, email=None, phone=None, street1=None, street2=None, city=None, state_province=None, postal_code=None, country=None):
@@ -97,13 +76,6 @@ class ContactsApiClient:
             headers=headers
         )
         
-        # try:
-        #     response.raise_for_status()
-        # except requests.exceptions.HTTPError as e:
-        #     logger.error(f"HTTP error occurred while updating contact {contact_id}: {e}")
-        #     raise
-        
-        # logger.info(f"Contact {contact_id} updated successfully.")
         return response
 
     def delete_contact(self, contact_id):
@@ -112,11 +84,4 @@ class ContactsApiClient:
         headers = {"Authorization": f"Bearer {self.token}"} if self.token else {}
         response = requests.delete(f"{self.BASE_URL}/contacts/{contact_id}", headers=headers)
         
-        # try:
-        #     response.raise_for_status()
-        # except requests.exceptions.HTTPError as e:
-        #     logger.error(f"HTTP error occurred while deleting contact {contact_id}: {e}")
-        #     raise
-        
-        # logger.info(f"Contact {contact_id} deleted successfully.")
         return response
