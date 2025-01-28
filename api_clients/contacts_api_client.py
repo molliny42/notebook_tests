@@ -50,22 +50,22 @@ class ContactsApiClient:
         
         return response
 
-    def update_contact(self, contact_id, first_name=None, last_name=None, birthdate=None, email=None, phone=None, street1=None, street2=None, city=None, state_province=None, postal_code=None, country=None):
+    def update_contact(self, contact_id, contact):
         """Method to update an existing contact."""
         logger.info(f"Updating contact with ID: {contact_id}.")
         headers = {"Authorization": f"Bearer {self.token}"} if self.token else {}
         contact_data = {
-            "firstName": first_name,
-            "lastName": last_name,
-            "birthdate": birthdate,
-            "email": email,
-            "phone": phone,
-            "street1": street1,
-            "street2": street2,
-            "city": city,
-            "stateProvince": state_province,
-            "postalCode": postal_code,
-            "country": country
+            "firstName": contact.first_name,
+            "lastName": contact.last_name,
+            "birthdate": contact.birthdate,
+            "email": contact.email,
+            "phone": contact.phone,
+            "street1": contact.street1,
+            "street2": contact.street2,
+            "city": contact.city,
+            "stateProvince": contact.state_province,
+            "postalCode": contact.postal_code,
+            "country": contact.country
         }
         
         contact_data = {key: value for key, value in contact_data.items() if value is not None}

@@ -29,7 +29,7 @@ def test_add_contact_missing_first_name(contacts_api_client):
     with allure.step("Add contact with missing first name"):
         response = contacts_api_client.add_contact(contact_data)
     
-    ApiResponseHelper.check_response(response, 400, logger)  # Проверяем статус код
+    ApiResponseHelper.check_response(response, 400, logger)
     message = response.json().get("message")
     assert message == "Contact validation failed: firstName: Path `firstName` is required.", \
         f"Expected error message: 'Contact validation failed: firstName: Path `firstName` is required.', but got {message}"
