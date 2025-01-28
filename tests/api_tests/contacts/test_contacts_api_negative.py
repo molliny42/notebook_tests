@@ -1,6 +1,6 @@
 import allure
 from logger_config import setup_logger
-from helpers.api_response_helper import ApiResponseHelper  # Импортируем ApiResponseHelper
+from helpers.api_response_helper import ApiResponseHelper
 
 logger = setup_logger('contacts_api_tests', 'contacts_api_tests.log')
 

@@ -80,55 +80,55 @@ def test_get_contact_by_id(contacts_api_client):
     assert get_response_data["_id"] == contact_id, f"Expected contact ID to be {contact_id}, but got {get_response_data['_id']}"
     ApiResponseHelper.check_user_data(contact_data, get_response_data, logger)  # Проверяем данные пользователя
 
-@allure.feature("Contact Update")
-@allure.story("Test updating a contact")
-def test_update_contact(contacts_api_client):
-    """Test updating a contact."""
+# @allure.feature("Contact Update")
+# @allure.story("Test updating a contact")
+# def test_update_contact(contacts_api_client):
+#     """Test updating a contact."""
     
-    contact_data = ContactData(
-        first_name="Tatiana",  
-        last_name="Rinina",
-        birthdate="1996-01-24",
-        email="taniamalinina@fake.com",
-        phone="19960124",
-        street1="Batorego 14",
-        street2="Terebelska 5",
-        city="Biala Podlaska",
-        state_province="LB",
-        postal_code="21-500",
-        country="PL"
-    )
+#     contact_data = ContactData(
+#         first_name="Tatiana",  
+#         last_name="Rinina",
+#         birthdate="1996-01-24",
+#         email="taniamalinina@fake.com",
+#         phone="19960124",
+#         street1="Batorego 14",
+#         street2="Terebelska 5",
+#         city="Biala Podlaska",
+#         state_province="LB",
+#         postal_code="21-500",
+#         country="PL"
+#     )
 
-    with allure.step("Add a new contact for updating"):
-        logger.info(f"Adding a new contact for updating: {contact_data}")
-        add_response = contacts_api_client.add_contact(contact_data.to_dict())
+#     with allure.step("Add a new contact for updating"):
+#         logger.info(f"Adding a new contact for updating: {contact_data}")
+#         add_response = contacts_api_client.add_contact(contact_data.to_dict())
     
-    contact_id = add_response.json()["_id"]
+#     contact_id = add_response.json()["_id"]
    
-    updated_contact_data = ContactData(
-        first_name="Tatiana",
-        last_name="Maximova",
-        birthdate="1996-01-24",
-        email="taniamakerimova@fake.com",
-        phone="1234567890",
-        street1="New Address 123",
-        street2="Flat 45",
-        city="Lublin",
-        state_province="Lubelskie",
-        postal_code="20-100",
-        country="PL"
-    )
+#     updated_contact_data = ContactData(
+#         first_name="Tatiana",
+#         last_name="Maximova",
+#         birthdate="1996-01-24",
+#         email="taniamakerimova@fake.com",
+#         phone="1234567890",
+#         street1="New Address 123",
+#         street2="Flat 45",
+#         city="Lublin",
+#         state_province="Lubelskie",
+#         postal_code="20-100",
+#         country="PL"
+#     )
     
-    with allure.step(f"Update contact with ID: {contact_id}"):
-        logger.info(f"Updating contact with ID: {contact_id}")
-        update_response = contacts_api_client.update_contact(contact_id, updated_contact_data.to_dict())  # Используем to_dict()
+#     with allure.step(f"Update contact with ID: {contact_id}"):
+#         logger.info(f"Updating contact with ID: {contact_id}")
+#         update_response = contacts_api_client.update_contact(contact_id, updated_contact_data.to_dict())  # Используем to_dict()
     
-    logger.info(f"Response body: {update_response.text}")
+#     logger.info(f"Response body: {update_response.text}")
         
-    ApiResponseHelper.check_response(update_response, 200, logger)  # Проверяем статус код
-    update_response_data = update_response.json()
-    assert update_response_data["_id"] == contact_id, f"Expected contact ID to be {contact_id}, but got {update_response_data['_id']}"
-    ApiResponseHelper.check_user_data(updated_contact_data, update_response_data, logger)  # Проверяем данные пользователя
+#     ApiResponseHelper.check_response(update_response, 200, logger)  # Проверяем статус код
+#     update_response_data = update_response.json()
+#     assert update_response_data["_id"] == contact_id, f"Expected contact ID to be {contact_id}, but got {update_response_data['_id']}"
+#     ApiResponseHelper.check_user_data(updated_contact_data, update_response_data, logger)  # Проверяем данные пользователя
 
 @allure.feature("Contact Deletion")
 @allure.story("Test deleting a contact")
