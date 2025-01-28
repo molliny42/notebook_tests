@@ -1,7 +1,0 @@
-2025-01-27 01:57:26,723 - INFO - Initializing UserApiClient fixture
-2025-01-27 01:57:26,723 - INFO - UserApiClient initialized.
-2025-01-27 01:57:26,723 - INFO - Getting token for user: test2@fake.com
-2025-01-27 01:57:26,723 - INFO - Trying to log in with email: test2@fake.com
-2025-01-27 01:57:27,272 - INFO - Login successful. Token received.
-2025-01-27 01:57:27,274 - INFO - Token received successfully
-2025-01-27 01:57:27,274 - INFO - Creating ContactsApiClient instance with the retrieved token

@@ -1,4 +1,0 @@
-[32mINFO    [0m conftest:conftest.py:12 Initializing UserApiClient fixture
-[32mINFO    [0m api_clients.users_api_client:users_api_client.py:11 UserApiClient initialized.
-[32mINFO    [0m api_clients.users_api_client:users_api_client.py:58 Adding new user: Updated Username, Email: test2@fake.com
-[1m[31mERROR   [0m api_clients.users_api_client:users_api_client.py:68 HTTP error occurred while adding user: 400 Client Error: Bad Request for url: https://thinking-tester-contact-list.herokuapp.com/users

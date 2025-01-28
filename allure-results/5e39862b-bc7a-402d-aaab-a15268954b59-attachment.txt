@@ -1,4 +1,0 @@
-headers
-{'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Nzk3NzY0MmZjZjUwMjAwMTMyZDJmMzciLCJpYXQiOjE3Mzc5Nzk0NTl9.ZrO4eAjbN_LvJf1QkWpNTtA6qR7cI_mqgEB8GSDHRz4'}
-headers for deleting
-{'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Nzk3NzY0MmZjZjUwMjAwMTMyZDJmMzciLCJpYXQiOjE3Mzc5Nzk0NTl9.ZrO4eAjbN_LvJf1QkWpNTtA6qR7cI_mqgEB8GSDHRz4'}

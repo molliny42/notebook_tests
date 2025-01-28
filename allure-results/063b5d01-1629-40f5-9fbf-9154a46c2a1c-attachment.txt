@@ -1,4 +1,0 @@
-2025-01-27 01:57:40,529 - INFO - Initializing UserApiClient fixture
-2025-01-27 01:57:40,529 - INFO - UserApiClient initialized.
-2025-01-27 01:57:40,530 - INFO - Trying to log in with email: invalid_email@example.com
-2025-01-27 01:57:42,007 - ERROR - Login failed: Invalid email or password.
